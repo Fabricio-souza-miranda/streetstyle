@@ -1,0 +1,9 @@
+@import "./global/global.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/cores.css";
+
+/* Utilidades */
+@import "./utilidades/componentes.css";
+
+/* Page styles */
+@import "./tela_de_login/login_screen.css";
