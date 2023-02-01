@@ -19,24 +19,41 @@
         <h1 class="font-1-sup">Iae, Bem vindo!</h1>
         <h2 class="font-2-xs cor-7">Por favor preencha com seus dados.</h2>
       </div>
-      <form action="" class="grid-container">
+      <form action="" class="grid-container" id="form">
         <div class="nome">
-          <label for="nome">Nome</label>
-          <input type="text" placeholder="Barry">
+          <div class="form-control">
+            <label for="name">Nome</label>
+            <input class="required" id="username" type="text" placeholder="Barry">
+            <small class="small-required">Deve ter no mínimo 3 letras.</small>
+          </div>
         </div>
+
         <div class="sobrenome">
-          <label for="sobrenome">Sobrenome</label>
-          <input type="text" placeholder="Allen">
+          <div class="form-control">
+            <label for="lastname">Sobrenome</label>
+            <input class="required" id="lastname" type="text" placeholder="Allen">
+            <small class="small-required">text</small>
+          </div>
         </div>
+
         <div class="email">
-          <label for="email">Email</label>
-          <input type="email" placeholder="seuemail@email.com">
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input class="required" id="email" type="text" placeholder="seuemail@email.com">
+            <img src="img/icons/email.svg" alt="">
+            <small class="small-required">text</small>
+          </div>
         </div>
+
         <div class="senha">
-          <label for="senha">Senha</label>
-          <input type="password" id="password">
-          <img src="img/icons/mostrar_senha.svg" alt="" width="16" height="12" id="passwordShow">
+          <div class="form-control">
+            <label for="password">Senha</label>
+            <input class="required" id="password" type="password" id="password">
+            <img src="img/icons/mostrar_senha.svg" alt="" width="16" height="12" id="passwordShow">
+            <small class="small-required">text</small>
+          </div>
         </div>
+        
       </form>
       <div class="other">
         <div class="options">
@@ -44,7 +61,7 @@
         </div>
         <h3 class="font-1-xs"><a href="login.html">Já possui acesso?</a></h3>
       </div>
-      <button class="cor-w font-1-m-b"><a href="store.html">CADASTRAR-SE</a></button>
+      <a class="link" href="store.html"><button class=" cor-w font-1-m-b" type="submit" id="button">CADASTRAR-SE</button></a>
       <div class="or cor-4 font-1-s">ou</div>
       <div class="alternatives">
         <ul>

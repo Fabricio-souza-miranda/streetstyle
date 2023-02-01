@@ -29,11 +29,11 @@ section .container {
 .container {
   background-color: #fff;
   border-radius: 10px;
-  padding: 0px 40px 60px 40px;
+  padding: 0px 40px 40px 40px;
 }
 
 .header{
-  padding: 40px 0px;
+  padding: 24px 0px;
 }
 
 .header h1 {
@@ -54,8 +54,6 @@ section .container {
   }
 }
 
-
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -65,12 +63,12 @@ section .container {
   "senha senha"
   ;
   column-gap: 20px;
-  row-gap: 12px;
 }
 
 .grid-container .nome {
   grid-area: nome;
 }
+
 .grid-container .sobrenome {
   grid-area: sobrenome;
 }
@@ -79,6 +77,7 @@ section .container {
   position: relative;
 }
 .grid-container .senha {
+  grid-area: senha;
   position: relative;
 }
 .grid-container .senha img{
@@ -86,10 +85,10 @@ section .container {
   position: absolute;
   display: inline-block;
   right: 12px;
-  bottom: 11px;
+  bottom: 28px;
 }
 
-.grid-container .email::after {
+.grid-container .email img {
   position: absolute;
   content: "";
   display: inline-block;
@@ -97,18 +96,18 @@ section .container {
   height: 14px;
   background-image: url("../../img/icons/email.svg");
   right: 12px;
-  bottom: 9px;
+  bottom: 28px;
 }
 .grid-container .senha {
   grid-area: senha;
 }
-.grid-container div label {
+.grid-container .form-control label {
   font: 400 1rem/1.5 'Cabin', sans-serif;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   color: #2D2D2D;
 }
-.grid-container input {
+.grid-container .form-control input {
   width: 100%;
   background: #F7F7F7;
   border: 1px solid #EAEAEA;
@@ -117,6 +116,28 @@ section .container {
   padding: 8px 12px;
   outline: none;
 }
+
+.grid-container .form-control small {
+  padding-left: 8px;
+  color: #e74c3c;
+  visibility: hidden;
+}
+.grid-container .form-control.error small {
+  visibility: initial;
+}
+.grid-container .form-control.success input {
+  border-color: #2ecc71;
+}
+.grid-container .form-control.error input {
+  border-color: #e74c3c;
+}
+
+.small-required{
+  padding-left: 8px;
+  color: #e74c3c;
+  visibility: hidden;
+}
+
 .grid-container input:focus{
   border: 1px solid #C137F1;
 }
@@ -221,7 +242,7 @@ section .container {
   width: 100%;
 }
 
-.container button {
+.container .link button{
   cursor: pointer;
   border: none;
   background-color: #C137F1;
@@ -232,22 +253,23 @@ section .container {
   transition: all .2s ease-in;
 }
 
-.container  button:hover {
-  transform: translateY(-3px);
-  background-color: #D15EF9;
+.container .link button:disabled{
+  background-color: #ccc;
 }
 
 .alternatives ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .alternatives ul li a img{
-  padding: 6px 24px;
+  padding: 12px 0px;
 }
 
 .alternatives ul li {
+  width: 100%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, .2);
   transition: all .2s ease-in-out;
   cursor: pointer;
@@ -256,7 +278,7 @@ section .container {
   align-items: center;
 }
 .alternatives ul li:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .alternatives ul li:nth-child(2){
