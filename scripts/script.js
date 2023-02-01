@@ -38,7 +38,7 @@ const smallRequired = document.querySelectorAll(".small-required");
 button.disabled = true;
 
 required.forEach((input) => {
-  input.addEventListener("change", () => {
+  input.addEventListener("input", () => {
     checkInputs();
   })
 })
@@ -100,6 +100,8 @@ required.forEach((input) => {
 
    if(formIsValid){
     button.disabled = false;
+   } else {
+    button.disabled = true;
    }
  }
 
