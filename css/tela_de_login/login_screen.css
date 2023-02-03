@@ -4,6 +4,8 @@ section {
   align-items: center;
   min-height: 100vh;
   background-image: url("../../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 0px 8px;
 }
 
